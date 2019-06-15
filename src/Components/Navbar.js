@@ -3,12 +3,16 @@ import {withStyles} from '@material-ui/styles'
 
 const styles = {
     root: {
-        display:'flex',
-        justifyContent:'center',
-        alignItems:'center',
+        paddingTop:'1%',
         '& a': {
             textDecoration:'none',
-            color:"#222"
+            color:"#222",
+            margin:'0 10px',
+            fontSize:'1.2em'
+        },
+        '& a:hover': {
+            color:'red',
+            textDecoration:'underline'
         }
     }
 }
