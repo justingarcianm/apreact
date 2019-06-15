@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
+import {NavLink} from 'react-router-dom'
 import {withStyles} from '@material-ui/styles'
 
 const styles = {
     root: {
-        paddingTop:'1%',
+        padding:'1%',
         '& a': {
             textDecoration:'none',
             color:"#222",
@@ -22,10 +23,10 @@ export class Navbar extends Component {
         const { classes } = this.props
         return (
             <header className={classes.root}>
-                <a href="#">Home</a>
-                <a href="#">Gallery</a>
-                <a href="#">About</a>
-                <a href="#">Contact</a>
+                <NavLink exact to="/">Home</NavLink>
+                <NavLink exact to="/gallery">Gallery</NavLink>
+                <NavLink exact to="/about">About</NavLink>
+                <NavLink exact to="/contact">Contact</NavLink>
             </header>
         )
     }

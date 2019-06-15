@@ -3,8 +3,24 @@ import {withStyles} from '@material-ui/styles'
 
 const styles = {
     root: {
-
-    }
+        padding:'1%',
+        '& a': {
+            textDecoration:'none',
+            color:"#222",
+            margin:'0 40px',
+            fontSize:'1.2em'
+        },
+        '& a:hover': {
+            color:'red',
+            textDecoration:'underline'
+        }
+    },
+    copy: {
+        padding:'2%',
+        display:'flex',
+        justifyContent:'center',
+        fontWeight:'bold'
+     }
 }
 
 export class Footer extends Component {

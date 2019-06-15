@@ -9,8 +9,8 @@ const styles = {
         justifyContent:'center',
         alignItems:'center',
         flexDirection:'column',
+        height:'100vh',
         '& h1':{
-            paddingTop:'5%',
             fontSize:'4em',
             letterSpacing:'.2em',
             margin:'auto',
@@ -18,6 +18,9 @@ const styles = {
                 color:'red'
             }
         }
+    },
+    image:{
+        
     }
 }
 
@@ -28,7 +31,7 @@ export class Home extends Component {
             <div className={classes.root}>
                 <h1><span>A</span>aron <span>A</span>rt</h1>
                 <Navbar/>     
-                <h3>Slideshow here</h3>   
+                <img className={classes.image} src='https://source.unsplash.com/collection/art' alt="art"/>   
                 <Footer />
             </div>
         )
