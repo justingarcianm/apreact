@@ -16,10 +16,10 @@ const styles = {
         }
     },
     copy: {
-        padding:'2%',
+        paddingTop:'20px',
         display:'flex',
         justifyContent:'center',
-        fontWeight:'bold'
+        fontWeight:'lighter'
      }
 }
 

@@ -8,10 +8,16 @@ const styles = {
         display:'flex',
         justifyContent:'center',
         alignItems:'center',
-        flexDirection:'column'
+        flexDirection:'column',
+        height:'100vh'
     },
     image:{
-        
+        borderTop: "solid 1px black",
+        paddingTop:'15px',
+        '& img': {
+            height:'65vh',
+            maxWidth:'100%'
+        }
     }
 }
 
@@ -22,7 +28,7 @@ export class Home extends Component {
             <div className={classes.root}>
                 <Navbar/>     
                 <div className={classes.image}>
-                <img src='https://source.unsplash.com/collection/art' alt="art"/>
+                <img src='https://source.unsplash.com/featured/?red' alt="red"/>
                 </div>
                 <Footer />
             </div>

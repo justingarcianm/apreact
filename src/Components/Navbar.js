@@ -8,24 +8,26 @@ const styles = {
         alignItems:'center',
         justifyContent:'center',
         flexDirection:'column',
+        paddingTop:'20px',
         '& h1': {
-            fontSize:'3em'
+            fontSize:'3em',
+            letterSpacing:'.1em',
+            fontWeight:'400'
         },
         '& span': {
-            color:'red'
+            color:'darkred'
         }
     },
     navLinks: {
         padding:'2rem',
         '&  a': {
             textDecoration:"none",
-            color:'#222',
+            color:'#999',
             margin:'15px',
-            transition:"all 500ms ease-in-out"
+            transition:"all 400ms ease-in-out"
         },
         '& a:hover': {
-            color:'red',
-            textDecoration:'underline'
+            color:'#222'
         }
     }
 }
