@@ -4,22 +4,25 @@ import {withStyles} from '@material-ui/styles'
 const styles = {
     root: {
         padding:'1%',
+        display:'flex',
+        alignItems:'center',
+        flexDirection:'column',
         '& a': {
             textDecoration:'none',
             color:"#222",
             margin:'0 40px',
-            fontSize:'1.2em'
+            fontSize:'1.2em',
+            transition:'all ease-in-out 400ms'
         },
         '& a:hover': {
-            color:'red',
+            color:'darkred',
             textDecoration:'underline'
         }
     },
     copy: {
         paddingTop:'20px',
-        display:'flex',
-        justifyContent:'center',
-        fontWeight:'lighter'
+        fontWeight:'lighter',
+        letterSpacing:'.5em'
      }
 }
 
