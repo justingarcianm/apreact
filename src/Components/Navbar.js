@@ -8,7 +8,7 @@ const styles = {
         alignItems:'center',
         justifyContent:'center',
         flexDirection:'column',
-        paddingTop:'20px',
+        paddingTop:'2%',
         '& h1': {
             fontSize:'3em',
             letterSpacing:'.1em',

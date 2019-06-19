@@ -1,8 +1,12 @@
+.Gallery {
+    height: 100%;
+}
+
 .Gallery-grid {
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: repeat(4, 20%);
-    grid-gap: 5%;
+    grid-template-columns: repeat(3, 25%);
+    grid-gap: 12%;
 }
 img {
     width: 100%;

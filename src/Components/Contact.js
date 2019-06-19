@@ -7,7 +7,7 @@ export class Contact extends Component {
         return (
             <div>
                 <Navbar/>
-                <div>
+                <div className="Contact">
                 <h1>Contact</h1>
                 </div>
                 <Footer />

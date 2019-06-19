@@ -7,6 +7,7 @@ const styles = {
         display:'flex',
         alignItems:'center',
         flexDirection:'column',
+        marginTop:'auto',
         '& a': {
             textDecoration:'none',
             color:"#222",
@@ -32,10 +33,10 @@ export class Footer extends Component {
         return (
             <div className={classes.root}>
                 <div className={classes.links}>
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-etsy"></i></a>
-                <a href="#"><i class="fas fa-paint-brush"></i></a>
-                <a href="#"><i class="fas fa-envelope"></i></a>
+                <a href="facebook.com"><i className="fab fa-facebook-f"></i></a>
+                <a href="esty.com"><i className="fab fa-etsy"></i></a>
+                <a href="dailypaintworks"><i className="fas fa-paint-brush"></i></a>
+                <a href="gmail.com"><i className="fas fa-envelope"></i></a>
                 </div>
                 <div className={classes.copy}>
                     <p>© 2018 Aaron Garcia</p>

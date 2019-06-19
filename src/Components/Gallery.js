@@ -2,33 +2,43 @@ import React, { Component } from 'react'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import Container from '@material-ui/core/Container';
+import uuid from 'uuid/v4'
 import './Gallery.css'
 
-// const url = `https://source.unsplash.com/featured/?${random}`
-
-const imgArray  = [
-    {name: "art", src:"https://source.unsplash.com/featured/?art"},
-    {name: "person", src:"https://source.unsplash.com/featured/?person"},
-    {name: "animals", src:"https://source.unsplash.com/featured/?animals"},
-    {name: "nature", src:"https://source.unsplash.com/featured/?nature"},
-    {name: "colors", src:"https://source.unsplash.com/featured/?colors"},
-    {name: "objects", src:"https://source.unsplash.com/featured/?objects"},
-    {name: "paint", src:"https://source.unsplash.com/featured/?paint"},
-]
-
-
+const URL = 'https://source.unsplash.com/featured/?'
 
 export class Gallery extends Component {
-    
+    constructor(props){
+        super(props)
+        this.randomCatGen = this.randomCatGen.bind(this)
+        this.randomImgs = this.randomImgs.bind(this)
+    }
+
+    randomCatGen(){
+        const randomCat = ['person','animals','objects']
+        const newWord = Math.floor(Math.random() * randomCat.length)
+        let word = randomCat[newWord]
+        return {name:word, src:`${URL}${word}`}
+    }
+    randomImgs(){
+        let generatedWord = this.randomCatGen()
+        let i
+        let arr = []
+        for(i = 0;i < 3;i++){
+            arr.push(generatedWord)
+        }
+        console.log(arr)
+        return arr.map( image => <img src={image.src} key={uuid()} id={image.name} alt={image.name}/>)
+    }
     render() {
-        const imgGen = imgArray.map( image => 
-        <img src={image.src} alt={image.name} key={image.name}/>)
         return (
-        <div>
+        <div className="Gallery">
             <Navbar/>
                 <Container fixed>
             <div className="Gallery-grid">
-                {imgGen}
+                {this.randomImgs()}
+                {this.randomImgs()}
+                {this.randomImgs()}
                </div>
             </Container>
             <Footer />

@@ -1,0 +1,16 @@
+.About {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    max-width: 100%;
+    padding: 0 20%;
+}
+.About h1 {
+    margin: auto;
+}
+.About-grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 5%;
+}
